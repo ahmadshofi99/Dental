@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="150.0" styleClass="side-menu" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SideMenuViewController">
+   <children>
+      <Pane prefHeight="153.0" prefWidth="150.0">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="25.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/favicon-01.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </children>
+      </Pane>
+      <Separator opacity="0.43" prefWidth="200.0" />
+      <JFXButton fx:id="btnDashboard" layoutX="10.0" layoutY="366.0" onAction="#openDashboard" prefHeight="45.0" prefWidth="148.0" styleClass="side-menu-button" text="Dashboard">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="HOME" size="20" wrappingWidth="30.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnPatients" layoutX="10.0" layoutY="166.0" onAction="#openPatients" prefHeight="45.0" prefWidth="148.0" styleClass="side-menu-button" text="Patients">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="USER_PLUS" size="20" wrappingWidth="30.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnDoctors" layoutX="10.0" layoutY="216.0" onAction="#openDoctors" prefHeight="45.0" prefWidth="148.0" styleClass="side-menu-button" text="Doctors">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="USER_MD" size="20" wrappingWidth="30.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnAppoinments" layoutX="10.0" layoutY="266.0" onAction="#openAppointmens" prefHeight="45.0" prefWidth="148.0" styleClass="side-menu-button" text="Appointments">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="TH_LIST" size="20" wrappingWidth="30.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnCarriers" layoutX="10.0" layoutY="366.0" onAction="#openCarriers" prefHeight="45.0" prefWidth="148.0" styleClass="side-menu-button" text="Carriers">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="BELL" size="20" wrappingWidth="30.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnInvoice" layoutX="10.0" layoutY="366.0" onAction="#openInvoice" prefHeight="45.0" prefWidth="148.0" styleClass="side-menu-button" text="Invoice">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="MONEY" size="20" wrappingWidth="30.0" />
+         </graphic>
+      </JFXButton>
+      <Separator layoutX="10.0" layoutY="163.0" opacity="0.43" prefWidth="200.0" />
+      <JFXButton fx:id="btnLogout" layoutX="10.0" layoutY="416.0" onAction="#openLogout" prefHeight="45.0" prefWidth="148.0" styleClass="side-menu-button" text="Log out" />
+      <JFXButton fx:id="btnExit" layoutX="10.0" layoutY="469.0" onAction="#exit" prefHeight="45.0" prefWidth="148.0" styleClass="side-menu-button" text="Exit" />
+   </children>
+</VBox>

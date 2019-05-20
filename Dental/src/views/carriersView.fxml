@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Text?>
+
+
+<StackPane prefHeight="680.0" prefWidth="1220.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CarriersViewController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1220.0">
+         <children>
+            <AnchorPane layoutX="110.0" layoutY="155.0" prefHeight="465.0" prefWidth="478.0" styleClass="card">
+               <children>
+                  <AnchorPane layoutX="68.0" layoutY="-78.0" prefHeight="200.0" prefWidth="343.0">
+                     <styleClass>
+                        <String fx:value="card" />
+                        <String fx:value="blue-gradient" />
+                     </styleClass>
+                     <children>
+                        <Text fill="WHITE" layoutX="87.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 24; -fx-font-weight: bold;" text="Add New Carrier" />
+                     </children>
+                  </AnchorPane>
+                  <JFXTextField labelFloat="true" layoutX="72.0" layoutY="177.0" prefHeight="30.0" prefWidth="329.0" promptText="Enter Carrier Code" />
+                  <JFXTextField labelFloat="true" layoutX="72.0" layoutY="249.0" prefHeight="30.0" prefWidth="327.0" promptText="Enter Carrier Name" />
+                  <JFXButton layoutX="102.0" layoutY="334.0" prefHeight="39.0" prefWidth="115.0" styleClass="edit-button" text="Update" />
+                  <JFXButton layoutX="270.0" layoutY="334.0" prefHeight="39.0" prefWidth="115.0" styleClass="save-button" text="Save" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="615.0" layoutY="155.0" prefHeight="465.0" prefWidth="570.0" styleClass="card">
+               <children>
+                  <TableView layoutX="24.0" layoutY="24.0" prefHeight="349.0" prefWidth="525.0">
+                    <columns>
+                      <TableColumn prefWidth="269.66668701171875" text="CARRIER CODE" />
+                      <TableColumn prefWidth="254.33331298828125" text="CARRIER NAME" />
+                    </columns>
+                  </TableView>
+                  <Separator layoutX="26.0" layoutY="392.0" prefHeight="4.0" prefWidth="522.0" />
+                  <JFXButton buttonType="RAISED" layoutX="196.0" layoutY="415.0" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: white; -fx-border-radius: 40; -fx-background-radius: 40;" text=" ">
+                     <graphic>
+                        <FontAwesomeIcon fill="#12972d" iconName="PENCIL" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="326.0" layoutY="414.0" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: white; -fx-border-radius: 40; -fx-background-radius: 40;" text=" ">
+                     <graphic>
+                        <FontAwesomeIcon fill="#c90a0a" iconName="REMOVE" size="20" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

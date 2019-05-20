@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane style="-fx-background-color: white;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashboardViewController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1220.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="11.0" layoutY="70.0" prefHeight="178.0" prefWidth="1194.0" spacing="16.0">
+               <children>
+                  <AnchorPane prefHeight="177.0" prefWidth="282.0" styleClass="card">
+                     <children>
+                        <AnchorPane layoutX="27.0" layoutY="-30.0" prefHeight="77.0" prefWidth="115.0" style="-fx-background-color: #06B0C5;" styleClass="card">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" iconName="USER_MD" layoutX="43.0" layoutY="51.0" size="36" />
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="197.0" layoutY="27.0" prefHeight="20.0" prefWidth="54.0" text="Doctors" textAlignment="RIGHT" />
+                        <Label layoutX="197.0" layoutY="71.0" prefHeight="40.0" prefWidth="54.0" style="-fx-font-size: 28; -fx-font-weight: bold;" text="34" />
+                        <Separator layoutX="11.0" layoutY="117.0" opacity="0.3" prefHeight="4.0" prefWidth="259.0" />
+                        <FontAwesomeIcon fill="#11a14d" iconName="CHEVRON_UP" layoutX="27.0" layoutY="152.0" size="22" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="177.0" prefWidth="282.0" styleClass="card">
+                     <children>
+                        <AnchorPane layoutX="27.0" layoutY="-30.0" prefHeight="77.0" prefWidth="115.0" style="-fx-background-color: #439C47;" styleClass="card">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" iconName="USER_PLUS" layoutX="43.0" layoutY="51.0" size="36" />
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="197.0" layoutY="27.0" prefHeight="20.0" prefWidth="54.0" text="Doctors" textAlignment="RIGHT" />
+                        <Label layoutX="197.0" layoutY="71.0" prefHeight="40.0" prefWidth="54.0" style="-fx-font-size: 28; -fx-font-weight: bold;" text="34" />
+                        <Separator layoutX="11.0" layoutY="117.0" opacity="0.3" prefHeight="4.0" prefWidth="259.0" />
+                        <FontAwesomeIcon fill="#11a14d" iconName="CHEVRON_UP" layoutX="27.0" layoutY="152.0" size="22" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="292.0" layoutY="10.0" prefHeight="177.0" prefWidth="282.0" styleClass="card">
+                     <children>
+                        <AnchorPane layoutX="27.0" layoutY="-30.0" prefHeight="77.0" prefWidth="115.0" style="-fx-background-color: #FD970F;" styleClass="card">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" iconName="MONEY" layoutX="43.0" layoutY="51.0" size="36" />
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="197.0" layoutY="27.0" prefHeight="20.0" prefWidth="54.0" text="Doctors" textAlignment="RIGHT" />
+                        <Label layoutX="197.0" layoutY="71.0" prefHeight="40.0" prefWidth="54.0" style="-fx-font-size: 28; -fx-font-weight: bold;" text="34" />
+                        <Separator layoutX="11.0" layoutY="117.0" opacity="0.3" prefHeight="4.0" prefWidth="259.0" />
+                        <FontAwesomeIcon fill="#11a14d" iconName="CHEVRON_UP" layoutX="27.0" layoutY="152.0" size="22" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="574.0" layoutY="10.0" prefHeight="177.0" prefWidth="282.0" styleClass="card">
+                     <children>
+                        <AnchorPane layoutX="27.0" layoutY="-30.0" prefHeight="77.0" prefWidth="115.0" style="-fx-background-color: #E74C48;" styleClass="card">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" iconName="TH_LIST" layoutX="43.0" layoutY="51.0" size="36" />
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="197.0" layoutY="27.0" prefHeight="20.0" prefWidth="54.0" text="Doctors" textAlignment="RIGHT" />
+                        <Label layoutX="197.0" layoutY="71.0" prefHeight="40.0" prefWidth="54.0" style="-fx-font-size: 28; -fx-font-weight: bold;" text="34" />
+                        <Separator layoutX="11.0" layoutY="117.0" opacity="0.3" prefHeight="4.0" prefWidth="259.0" />
+                        <FontAwesomeIcon fill="#11a14d" iconName="CHEVRON_UP" layoutX="27.0" layoutY="152.0" size="22" />
+                     </children>
+                  </AnchorPane>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <AnchorPane fx:id="donutChartHolder" layoutX="23.0" layoutY="264.0" prefHeight="378.0" prefWidth="578.0" styleClass="card" />
+            <PieChart fx:id="piechart" layoutX="616.0" layoutY="265.0" prefHeight="376.0" prefWidth="584.0" styleClass="card" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

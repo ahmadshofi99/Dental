@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<StackPane stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PatientViewController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1220.0">
+         <children>
+            <AnchorPane layoutX="29.0" layoutY="26.0" prefHeight="631.0" prefWidth="1171.0" styleClass="card">
+               <children>
+                  <Pane layoutY="-5.0" prefHeight="88.0" prefWidth="1172.0" style="-fx-background-radius: 4 4 0 0;" styleClass="blue-gradient" />
+                  <JFXTabPane layoutY="47.0" prefHeight="584.0" prefWidth="1172.0">
+                     <tabs>
+                        <Tab text="Add New">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTextField labelFloat="true" layoutX="62.0" layoutY="72.0" prefHeight="38.0" prefWidth="238.0" promptText="First Name">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField labelFloat="true" layoutX="330.0" layoutY="71.0" prefHeight="38.0" prefWidth="238.0" promptText="Last Name">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField labelFloat="true" layoutX="61.0" layoutY="147.0" prefHeight="38.0" prefWidth="238.0" promptText="Phone Number">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <HBox alignment="CENTER_LEFT" layoutX="331.0" layoutY="161.0" spacing="10.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="HAS INSURANCE">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Text>
+                                          <JFXRadioButton selected="true" text="YES">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="INSURANCE" />
+                                             </toggleGroup>
+                                          </JFXRadioButton>
+                                          <JFXRadioButton layoutX="148.0" layoutY="13.0" text="NO" toggleGroup="$INSURANCE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </JFXRadioButton>
+                                       </children>
+                                    </HBox>
+                                    <JFXTextField labelFloat="true" layoutX="62.0" layoutY="240.0" prefHeight="38.0" prefWidth="238.0" promptText="Address">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXDatePicker layoutX="334.0" layoutY="249.0" prefHeight="28.0" prefWidth="235.0" promptText="Date of birth" />
+                                    <JFXButton layoutX="207.0" layoutY="335.0" prefHeight="46.0" prefWidth="85.0" styleClass="edit-button" text="Update" />
+                                    <JFXButton layoutX="338.0" layoutY="335.0" prefHeight="46.0" prefWidth="85.0" styleClass="save-button" text="Save" />
+                                    <TitledPane animated="false" layoutX="663.0" layoutY="80.0" prefHeight="444.0" prefWidth="491.0" text="Patient Preveious Treatment">
+                                      <content>
+                                        <AnchorPane layoutY="71.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <JFXTextField labelFloat="true" layoutX="44.0" layoutY="27.0" promptText="Patient id" />
+                                                <JFXButton buttonType="RAISED" layoutX="205.0" layoutY="17.0" styleClass="btn-login" text="Search" />
+                                                <Separator layoutX="25.0" layoutY="68.0" prefWidth="450.0" />
+                                                <TableView layoutX="25.0" layoutY="88.0" prefHeight="313.0" prefWidth="444.0" />
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="List">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView layoutX="18.0" layoutY="17.0" prefHeight="467.0" prefWidth="1140.0">
+                                      <columns>
+                                        <TableColumn prefWidth="75.0" text="ID" />
+                                        <TableColumn prefWidth="140.6666259765625" text="FIRST NAME" />
+                                          <TableColumn prefWidth="159.3333740234375" text="LAST NAME" />
+                                          <TableColumn prefWidth="194.666748046875" text="HAS INSURANCE" />
+                                          <TableColumn prefWidth="148.3333740234375" text="PHONE" />
+                                          <TableColumn prefWidth="213.666748046875" text="ADDRESS" />
+                                          <TableColumn prefWidth="209.666748046875" text="DATE OF BIRTH" />
+                                      </columns>
+                                    </TableView>
+                                    <JFXButton layoutX="1069.0" layoutY="495.0" prefHeight="38.0" prefWidth="76.0" styleClass="delete-button" text="Delete" />
+                                    <JFXButton layoutX="968.0" layoutY="497.0" prefHeight="38.0" prefWidth="76.0" styleClass="edit-button" text="Edit" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainViewController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="760.0" prefWidth="1240.0">
+         <children>
+            <JFXToolbar fx:id="toolbar" prefHeight="60.0" prefWidth="1240.0" styleClass="toolbar" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0">
+               <left>
+                  <JFXHamburger fx:id="hamburger" prefWidth="60.0" styleClass="jfx-hamburger-icon" BorderPane.alignment="CENTER">
+                     <padding>
+                        <Insets left="24.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXHamburger>
+               </left>
+            </JFXToolbar>
+            <AnchorPane fx:id="contentPane" layoutX="123.0" layoutY="69.0" prefHeight="678.0" prefWidth="1117.0" />
+            <JFXDrawer fx:id="drawer" layoutY="67.0" prefHeight="693.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
